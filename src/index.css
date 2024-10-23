@@ -1,0 +1,261 @@
+:root {
+  --bg-dark: #1a1a1a;
+  --bg-card: #1b1b1b;
+  --text-primary: #e2e2e2;
+  --text-secondary: #a1a1a1;
+  --text-h1: #d0d0d0;
+  --accent-primary: #64ba7b;
+  --accent-hover: #3bf6ea;
+  --btn-hover: #3a7049;
+  --border-color: #333;
+  --upload-zone-bg: #2a2a2a;
+  --upload-zone-border: #555555;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1a1a1a, #010101);
+  font-family: 'Satoshi', sans-serif;
+  color: var(--text-primary);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.upload-card {
+  width: 100%;
+  max-width: 60rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.upload-card-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  width: 40%;
+  height: 40%;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.serverlogo {
+  width: 100px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.upload-card h1 {
+  font-size: 5.5rem;
+  font-weight: 500;
+  color: var(--text-h1);
+}
+
+.upload-zone {
+  position: relative;
+  border: 2px dashed var(--upload-zone-border);
+  background: var(--upload-zone-bg);
+  border-radius: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.upload-zone:hover {
+  border-color: var(--accent-primary);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.upload-zone input[type='file'] {
+  display: none;
+}
+.upload-content {
+  display: contents;
+}
+.icon-container {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgba(59, 246, 112, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.icon-container:hover {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgba(59, 246, 112, 0.213);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-container svg {
+  width: 3rem;
+  height: 3rem;
+  color: var(--accent-primary);
+}
+.icon-container:hover svg {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--accent-hover);
+}
+
+.upload-text {
+  text-align: center;
+}
+
+.upload-text h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.upload-text p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0 0 0;
+}
+
+.btn-primary {
+  width: 100%;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--btn-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.share-link {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-dark);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.share-link-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.link-icon {
+  padding: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 0.5rem;
+}
+
+.link-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--accent-primary);
+}
+
+.share-link input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.copy-button {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.copy-button:hover {
+  color: var(--accent-primary);
+}
+
+.space-y {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}

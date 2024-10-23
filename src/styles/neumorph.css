@@ -1,0 +1,25 @@
+@layer components {
+  .shadow-neumorph {
+    box-shadow: 6px 6px 6px #1a1a1a, -6px -6px 6px 0px #333333;
+}
+
+  .shadow-inner-neumorph {
+    box-shadow: inset 4px 4px 8px #1a1a1a,
+                inset -4px -4px 8px #2a2a2a;
+  }
+
+  .shadow-neumorph-button {
+    box-shadow: 4px 4px 8px #1a1a1a,
+                -4px -4px 8px #2a2a2a;
+  }
+
+  .shadow-neumorph-button-hover {
+    box-shadow: 6px 6px 12px #1a1a1a,
+                -6px -6px 12px #2a2a2a;
+  }
+
+  .shadow-neumorph-button-pressed {
+    box-shadow: inset 2px 2px 4px #1a1a1a,
+                inset -2px -2px 4px #2a2a2a;
+  }
+}
