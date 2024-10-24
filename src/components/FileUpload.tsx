@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { Upload, Loader2 } from 'lucide-react';
 import { supabase, BUCKET_NAME } from '../lib/supabase';
 import { toast } from 'react-hot-toast';
@@ -29,17 +29,14 @@ export const FileUpload = () => {
 
       if (uploadError) throw uploadError;
 
-      const {
-        data: { signedUrl },
-        error: urlError,
-      } = await supabase.storage
+      const { data, error: urlError } = await supabase.storage
         .from(BUCKET_NAME)
         .createSignedUrl(fileName, 3600);
 
       if (urlError) throw urlError;
 
-      if (signedUrl) {
-        setShareLink(signedUrl);
+      if (data?.signedUrl) {
+        setShareLink(data.signedUrl);
         toast.success('File uploaded successfully!');
 
         const checkAndDelete = async () => {
@@ -83,7 +80,7 @@ export const FileUpload = () => {
 
   return (
     <div className="upload-card">
-      {/* DOOM floppy disk */}
+      {/* DOOM floppy disk 666*/}
       <div className="upload-card-top">
         <img src="/server.png" alt="Server" className="serverlogo" />
         {/* <img src="/doom.png" alt="Floppy Disk" className="logo" /> */}
