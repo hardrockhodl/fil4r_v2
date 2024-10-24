@@ -84,7 +84,7 @@ export const FileUpload = () => {
       <div className="upload-card-top">
         <img src="/server.png" alt="Server" className="serverlogo" />
         {/* <img src="/doom.png" alt="Floppy Disk" className="logo" /> */}
-        <h1>Share Your Files</h1>
+        <h1>Share Your Fil3s</h1>
         <img src="/server.png" alt="Server" className="serverlogo" />
       </div>
 

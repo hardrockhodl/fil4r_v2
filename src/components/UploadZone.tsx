@@ -54,7 +54,7 @@ export const UploadZone: React.FC<UploadZoneProps> = ({
               ? `${(selectedFile.size / 1024).toFixed(1)} KB`
               : 'Drag & Drop your files here OR Browse Files'}
           </p>
-          <p>Max 5 GB file size</p>
+          <p>Max 50 MB file size</p>
         </div>
       </div>
     </label>
